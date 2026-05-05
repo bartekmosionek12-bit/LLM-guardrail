@@ -19,7 +19,7 @@ The pipeline follows a "Defense-in-Depth" strategy, ensuring that if one layer i
 
 ### 🛠️ Interactive Documentation (Swagger UI)
 To ensure professional-grade observability and seamless integration, I implemented a robust administrative API suite, fully documented and accessible via **Swagger UI (OpenAPI standard)**.
-![API Overview](api.png)
+![API Overview](assets/api.png)
 
 ## 🛡️ Defense Capabilities
 The engine is specifically engineered to mitigate the following high-risk attack vectors:
@@ -31,8 +31,8 @@ The engine is specifically engineered to mitigate the following high-risk attack
 ### Performance Examples
 | Action | Input / Output |
 | :--- | :--- |
-| **Blocked Attack** | ![Blocked Demo](malicious_prompt_attempt.png) |
-| **Safe Processing** | ![Safe Demo](safe_prompt_attempt.png) |
+| **Blocked Attack** | ![Blocked Demo](assets/malicious_prompt_attempt.png) |
+| **Safe Processing** | ![Safe Demo](assets/safe_prompt_attempt.png) |
 
 ## ⚖️ EU AI Act Roadmap
 The foundational vision for this project is to build a scalable framework capable of meeting the strict safety, transparency, and accountability requirements outlined in the upcoming **EU AI Act**:
