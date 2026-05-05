@@ -1,43 +1,57 @@
-# LLM Guardrail Engine (Multi-layer AI Safety Pipeline) 🛡️
+# 🛡️ LLM Guardrail Engine (Multi-layer AI Safety Pipeline)
 
-![Python](https://img.shields.io/badge/python-3.10+-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
-![AI Safety](https://img.shields.io/badge/Focus-AI_Safety_&_Compliance-red.svg)
+[![Status](https://img.shields.io/badge/Status-Active%20Development-orange.svg)](#current-status)
+[![Compliance](https://img.shields.io/badge/Compliance-EU%20AI%20Act-blue.svg)](#eu-ai-act-roadmap)
+[![Security](https://img.shields.io/badge/Focus-Adversarial%20Robustness-red.svg)](#defense-capabilities)
 
-## 📖 Project Overview
-I am developing a comprehensive, multi-layered security guardrail system designed to protect Large Language Models (LLMs) from adversarial attacks, prompt injections, and jailbreaks. Acting as a proactive security layer between the user and the core AI model, the architecture seamlessly combines low-latency heuristic filters with deep semantic analysis.
+## 📖 Overview
+The **LLM Guardrail Engine** is a sophisticated, multi-layered security middleware designed to intercept and neutralize adversarial attacks directed at Large Language Models (LLMs). Acting as a proactive security layer between the user and the core AI model, the architecture seamlessly combines low-latency heuristic filters with deep semantic analysis. 
 
-## 🛠️ Key Technical Features
-*   **Semantic Intent Recognition:** Uses `Sentence-Transformers` for vector-based similarity search (beyond simple keyword blacklisting).
-*   **AI-Driven Classification:** Integration with `Llama-Guard-3` for deep content moderation.
-*   **Automated Pattern Learning:** Dynamic expansion of the vector store with newly detected threats (IPS-like behavior).
-*   **Professional API Documentation:** Fully documented via **Swagger UI (OpenAPI)** for easy integration.
+This engine acts as a **Semantic Firewall**, evaluating user intent through hybrid analysis before any prompt reaches the inference stage.
 
+## 🏗️ System Architecture
+The pipeline follows a "Defense-in-Depth" strategy, ensuring that if one layer is bypassed, subsequent layers catch the anomaly.
 
-## 🚀 Vision: EU AI Act Compliance
-The foundational vision for this project is to build a scalable framework capable of meeting the strict safety, transparency, and accountability requirements outlined in the upcoming **EU AI Act**.
+1.  **Heuristic & Regex Layer:** Rapid scanning for known malicious patterns and PII (Personally Identifiable Information).
+2.  **Semantic Similarity Engine:** Utilizing `Sentence-Transformers` to perform semantic similarity searches against a dynamic, dual-vector database.
+3.  **Neural Classification Layer:** Integration with `Llama-Guard-3` for intelligent intent classification, leveraging In-Context Learning (ICL).
+4.  **Feedback & Continuous Learning:** Automated pattern learning mechanism which dynamically expands the vector store with newly detected threats.
 
-## 🏗️ Current Status
-The project is in an **active development phase**. I am independently engineering, red-teaming, and testing the architecture to refine its accuracy and defensive capabilities.
+### 🛠️ Interactive Documentation (Swagger UI)
+To ensure professional-grade observability and seamless integration, I implemented a robust administrative API suite, fully documented and accessible via **Swagger UI (OpenAPI standard)**.
+![API Overview](api.png)
+
+## 🛡️ Defense Capabilities
+The engine is specifically engineered to mitigate the following high-risk attack vectors:
+*   **Prompt Injection:** Indirect and direct attempts to hijack the model's instructions.
+*   **Jailbreaking:** Sophisticated role-playing or logic-based attempts to bypass safety filters (e.g., DAN-style prompts).
+*   **Payload Splitting & Obfuscation:** Detecting malicious intent hidden through Base64 encoding or character manipulation.
+*   **Semantic Bypassing:** Intercepting prompts that use synonyms or complex phrasing to hide harmful intent from standard keyword filters.
+
+### Performance Examples
+| Action | Input / Output |
+| :--- | :--- |
+| **Blocked Attack** | ![Blocked Demo](malicious_prompt_attempt.png) |
+| **Safe Processing** | ![Safe Demo](safe_prompt_attempt.png) |
+
+## ⚖️ EU AI Act Roadmap
+The foundational vision for this project is to build a scalable framework capable of meeting the strict safety, transparency, and accountability requirements outlined in the upcoming **EU AI Act**:
+
+*   **Art. 15 (Robustness & Accuracy):** Implementing measures to prevent "adversarial examples" and model manipulation.
+*   **Art. 10 (Data Governance):** Ensuring inputs are scanned for PII and sensitive data before processing.
+*   **Art. 13 (Transparency):** Detailed logging and telemetry of blocked attempts for auditability.
+
+## 🚀 Current Status & Public Release
+The system is currently in an active development phase, where I am independently engineering, red-teaming, and thoroughly testing the architecture.
+
+> **Notice:** The codebase is currently under **Private Security Audit** and intensive **Adversarial Red-Teaming**. 
+
+*   **Phase 1 (Current):** Engineering & Stress-Testing.
+*   **Phase 2 (Late 2026):** Beta release for selected security researchers.
+*   **Phase 3 (2027):** Open-source core with EU AI Act compliance templates.
 
 ## 🛠️ Tech Stack
-*   **Language:** Python
-*   **Framework:** FastAPI
-*   **Models:** Llama-3 (via Ollama/Local), Llama-Guard-3, SBERT
-*   **Database:** Vector Store (e.g., ChromaDB / FAISS)
-*   **Documentation:** Swagger UI
-
-
-## 🛡️ Live Demo & Examples
-
-### 1. Full API Structure
-Comprehensive security console for monitoring and system management.
-![API Endpoints](assets/api.png)
-
-### 2. Guardrail in Action: Blocked Attack
-The system detects "jailbreak" attempts and harmful prompts in real-time.
-![Blocked Attack](assets/malicious_prompt_attempt.png)
-
-### 3. Standard Operation: Safe Request
-Valid technical queries are processed normally with low latency.
-![Safe Query](assets/safe_prompt_attempt.png)
+*   **Backend:** FastAPI (Python)
+*   **AI Models:** Llama-Guard-3, SBERT (Sentence-Transformers)
+*   **Security Documentation:** OpenAPI / Swagger UI
+*   **Testing:** Custom Adversarial Prompt Dataset
