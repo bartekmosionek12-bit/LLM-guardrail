@@ -26,3 +26,18 @@ The project is in an **active development phase**. I am independently engineerin
 *   **Models:** Llama-3 (via Ollama/Local), Llama-Guard-3, SBERT
 *   **Database:** Vector Store (e.g., ChromaDB / FAISS)
 *   **Documentation:** Swagger UI
+
+
+## 🛡️ Live Demo & Examples
+
+### 1. Full API Structure
+Comprehensive security console for monitoring and system management.
+![API Endpoints](assets/api.png)
+
+### 2. Guardrail in Action: Blocked Attack
+The system detects "jailbreak" attempts and harmful prompts in real-time.
+![Blocked Attack](assets/malicious_prompt_attempt.png)
+
+### 3. Standard Operation: Safe Request
+Valid technical queries are processed normally with low latency.
+![Safe Query](assets/safe_prompt_attempt.png)
