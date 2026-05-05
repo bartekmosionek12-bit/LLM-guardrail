@@ -13,15 +13,6 @@ I am developing a comprehensive, multi-layered security guardrail system designe
 *   **Automated Pattern Learning:** Dynamic expansion of the vector store with newly detected threats (IPS-like behavior).
 *   **Professional API Documentation:** Fully documented via **Swagger UI (OpenAPI)** for easy integration.
 
-## 📸 Screenshots & Demo
-
-### Interactive API Documentation (Swagger)
-![Swagger UI Interface](assets/swagger-ui.png)
-*Professional administrative interface for monitoring and managing security layers.*
-
-### Security in Action
-![Security Logs](assets/security-logs.png)
-*Example of the system intercepting a semantic-bypass attempt.*
 
 ## 🚀 Vision: EU AI Act Compliance
 The foundational vision for this project is to build a scalable framework capable of meeting the strict safety, transparency, and accountability requirements outlined in the upcoming **EU AI Act**.
